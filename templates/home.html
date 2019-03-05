@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}BE-PROJECT{% endblock %}
+
+{% block breadcrumb %}
+  <h2>Welcome!</h2> 
+{% endblock %}
+
+{% block content %}
+<a href="{% url 'search' %}"><button type="button" class="btn btn-primary btn-lg btn-block">Search</button></a><br>
+<a href="{% url 'upload' %}"><button type="button" class="btn btn-secondary btn-lg btn-block">Upload</button></a>
+{% endblock %}

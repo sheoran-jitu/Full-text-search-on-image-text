@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}BE-PROJECT{% endblock %}
+
+{% block breadcrumb %}
+ <li class="breadcrumb-item active">Upload</li>
+{% endblock %}
+
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+  	<div class="form-group">
+  	    <label for="title">Title:</label>
+            <input type="text" class="form-control" id="title">
+        </div>
+        
+	<div class="form-group">
+		<div class="input-group input-file" name="img">
+    		<input type="file" class="form-control" placeholder='Choose a file...' />
+       		<button class="btn btn-warning btn-reset" type="reset">Reset</button>
+		</div>
+	</div>
+	<button type="submit" class="btn btn-success">Upload</button>
+
+</form>	
+{% endblock %}
+

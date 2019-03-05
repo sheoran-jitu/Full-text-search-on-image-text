@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Search{% endblock %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item active">Search Here</li>
+{% endblock %}
+
+{% block content %}
+  <form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="id_query">Query</label>
+      <textarea class="form-control" id="id_query" name="query" rows="5"></textarea>
+    </div>
+    <button type="submit" class="btn btn-success">Search</button>
+  </form>
+{% endblock %}

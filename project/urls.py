@@ -21,6 +21,8 @@ from MainApp import views
 
 urlpatterns = [
     url(r'^$', views.home, name='home'),
+    url(r'^search',views.search, name='search'),
+    url(r'^upload',views.upload, name='upload'),
     url(r'^admin/', admin.site.urls),
 
 ]
