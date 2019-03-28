@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Result</title>
-  </head>
-  <body>
-    <h1>Search Result</h1>
+{% extends 'base.html' %}
 
+{% block title %}Search{% endblock %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item active">Search Result</li>
+{% endblock %}
+
+{% block content %}
     {% for title in titles %}
-      {{ title }} <br>
+        <img src="/media/images/{{ title }}" class="rounded" > <br> 
     {% endfor %}
 
-  </body>
-</html>
+{% endblock %}
